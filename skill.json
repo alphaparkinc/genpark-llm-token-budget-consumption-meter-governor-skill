@@ -1,0 +1,35 @@
+{
+  "name": "genpark-llm-token-budget-consumption-meter-governor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Self-custody LLM API key usage meter & token budget consumption governor.",
+  "author": "genpark",
+  "category": "operations",
+  "tags": [
+    "token-budget",
+    "usage-meter",
+    "api-cost-governor",
+    "rate-limiter",
+    "ph-august19"
+  ],
+  "inputs": {
+    "tenant_id": {
+      "type": "string"
+    },
+    "allocated_monthly_budget_usd": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "budget_consumed_pct": {
+      "type": "number"
+    },
+    "is_throttled": {
+      "type": "boolean"
+    },
+    "projected_monthly_spend_usd": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
